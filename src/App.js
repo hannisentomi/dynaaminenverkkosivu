@@ -5,8 +5,8 @@ function App() {
 
   // Tarvittavat constantit
   const [kg, setKg] = useState(0)
-  const [bottles, setBottles] = useState(0)
-  const [time, setTime] = useState(0)
+  const [bottles, setBottles] = useState(1)
+  const [time, setTime] = useState(1)
   const [gender, setGender] = useState('male')
   const [promillet, setPromillet] = useState(0)
 
@@ -19,12 +19,15 @@ function App() {
     let gramsLeft = grams - (burning * time)
 
     if (gender === 'male') {
-      const tulos = gramsLeft / (kg * 0.7)
-      setPromillet(Math.abs(tulos))
+      let tulos = gramsLeft / (kg * 0.7)
+      if(tulos<0){
+        tulos=0}
+      setPromillet(tulos)
     }
     else {
-      const tulos = gramsLeft / (kg * 0.6)
-      setPromillet(Math.abs(tulos))
+      let tulos = gramsLeft / (kg * 0.6)
+      if(tulos<0){tulos=0}
+      setPromillet(tulos)
     }
   }
 
