@@ -1,8 +1,9 @@
-
+// Tomi Hänninen Tik22km
 import './App.css';
 import { useState } from 'react'
 function App() {
 
+  // Tarvittavat constantit
   const [kg, setKg] = useState(0)
   const [bottles, setBottles] = useState(0)
   const [time, setTime] = useState(0)
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <h3>Alkometri</h3>
+      <h3>Calculating alcohol blood level</h3>
       <form onSubmit={laske}>
         <div>
           <label>Weight</label>
@@ -74,10 +75,10 @@ function App() {
           <label>Female</label>
         </div>
         <div>
-          <label>Promillea </label>
+          <label>Promilles </label>
           <output>{promillet.toFixed(2)}</output>
         </div>
-        <button>Laske</button>
+        <button>Calculate</button>
       </form>
     </div>
   );
