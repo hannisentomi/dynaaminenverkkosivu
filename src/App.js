@@ -75,7 +75,7 @@ function App() {
         </div>
         <div>
           <label>Promillea </label>
-          <output>{promillet.toFixed(1)}</output>
+          <output>{promillet.toFixed(2)}</output>
         </div>
         <button>Laske</button>
       </form>
